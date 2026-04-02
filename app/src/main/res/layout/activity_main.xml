@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="儿童时间管理"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btn_set_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置每日使用时长"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_select_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择允许的应用"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改管理密码"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_start_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始监控"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_stop_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止监控"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前状态：未监控"
+        android:textSize="14sp"/>
+
+</LinearLayout>
