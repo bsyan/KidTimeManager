@@ -1,0 +1,30 @@
+name: 编译安卓APK
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取源码
+        uses: actions/checkout@v4
+
+      - name: 配置JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 配置Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: 授予编译脚本权限
+        run: chmod +x gradlew
+
+      - name: 执行编译
+        run: ./gradlew assembleDebug
+
+      - name: 上传编译好的APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: 儿童时间管理APK
+          path: app/build/outputs/apk/debug/app-debug.apk
